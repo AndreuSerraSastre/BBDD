@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "_20200928mascotes")
+$con = mysqli_connect("localhost", "root", "", "bd243206245d")
 or die("ERROR FATAL 0093DDFF");

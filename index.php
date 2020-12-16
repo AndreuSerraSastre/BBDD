@@ -10,17 +10,22 @@
     <div class="grid-container">
 
         <?php
-        for ($i = 1; $i < 9; $i++) {
+        $consulta = "SELECT * FROM `classe` inner join vehicle on vehicleReferencia = vehicle.idVehicle";
+
+
+        include './sql/ejecutarsql.php';
+
+        while ($valores = mysqli_fetch_array($resultat)) {
         ?>
-            <div class="grid-item" style="background-image: url(https://periodismodelmotor.com/wp-content/uploads/2020/08/coches-de-lujo-baratos-de-segunda-mano-1-1280x720.jpg);">
-                <h1 class="NombreClaseText">CLASE <?php echo $i ?></h1>
-                <a href="clase.php?Clase=<?php echo $i ?>">Reservar</a>
+            <div class="grid-item" style="background-image: url(./img/<?php echo $valores['foto'] ?>);">
+                <h1 class="NombreClaseText"><?php echo $valores['nom'] ?></h1>
+                <a href="clase.php?Clase=<?php echo $valores['nom'] ?>">Reservar</a>
             </div>
 
         <?php
         }
         ?>
-        
+
     </div>
 
     <div class="TextAyuda-main">

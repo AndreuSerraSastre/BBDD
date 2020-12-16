@@ -12,7 +12,7 @@
     session_start();
 
     $usuario = $_POST['uname'];
-    $pass = $_POST['psw'];
+    $pass = crypt($_POST['psw'], "bd243206245d");
 
     include './../sql/comprobarUsario.php';
 
@@ -23,14 +23,15 @@
         </div>";
         echo "<META HTTP-EQUIV='REFRESH' CONTENT='3;URL=./../index.php'>";
         unset($_SESSION["Usuario"]);
+        unset($_SESSION["Usuario"]);
+        unset($_SESSION["Role"]);
+        unset($_SESSION["ID"]);
     } else {
         echo "<div class=\"alertsucc\">
         <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> 
         <strong>CORRECTO!</strong> Has iniciado sesión correctamente.
         </div>";
         echo "<META HTTP-EQUIV='REFRESH' CONTENT='3;URL=./../index.php'>";
-        setcookie("Usuario", $usuario, time() + (86400 * 30), "/");
-        setcookie("Role", "Admin", time() + (86400 * 30), "/");
     }
     ?>
 

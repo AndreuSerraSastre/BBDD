@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php
-if (isset($_GET['CerrarSesion'])) {
-    setcookie("Usuario", "", time() + (86400 * 30), "/");
-    echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=./index.php'>";
-}
-?>
 
 <head>
 
@@ -22,8 +16,17 @@ if (isset($_GET['CerrarSesion'])) {
             <a class="active" href="./">Home</a>
             <a href="contact.php">Contactar</a>
             <?php
-            if (isset($_COOKIE["Usuario"])) {
-                if (isset($_COOKIE["Role"]) && $_COOKIE["Role"] == "Admin") {
+            session_start();
+
+            if (isset($_GET['CerrarSesion'])) {
+                unset($_SESSION["Usuario"]);
+                unset($_SESSION["Role"]);
+                unset($_SESSION["ID"]);
+                echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=./index.php'>";
+            }
+
+            if (isset($_SESSION["Usuario"])) {
+                if (isset($_SESSION["Role"]) && $_SESSION["Role"] == "ADMINISTRADOR") {
                     echo "<a href=\"reservas.php?filtrar=false\">Reservas</a>";
                     echo "<a href=\"vehiculos.php\">Vehiculos</a>";
                     echo "<a href=\"clientes.php\">Clientes</a>";

@@ -1,9 +1,10 @@
 <?php
 include 'connect.php';
 $resultat = mysqli_query($con, $consulta);
+$error = "null";
 
 if (!$resultat) {
-    printf("Error\n");
+    $error = mysqli_error($con);
 }
 
 
