@@ -1,0 +1,115 @@
+.alertneg {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.alertsucc {
+    padding: 20px;
+    background-color: #6BBD6E;
+    color: white;
+}
+
+.titulo-clase {
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.vehiculo-clase {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: rgba(220, 220, 220, 0.349);
+    padding: 25px;
+}
+
+
+.vehiculo-main {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: rgba(220, 220, 220, 0.349);
+    padding: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.opciones-vehiculo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen-vehiculo {
+    width: 450px;
+    height: 250px;
+}
+
+.icono-texto-clase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texto-opcion-clase {
+    margin-left: 5px;
+}
+
+.boton-seleccionar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: #51bcb8;
+    background-color: #51bcb8;
+    font-size: 20px;
+    transition: all 0.3s;
+    padding: 15px 35px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-selecionar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 150px;
+}
+
+.fecha-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-fecha-clase {
+    color: #a2a2a2;
+    line-height: 1;
+    letter-spacing: .4px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.fecha-input-clase {
+    margin: 15px;
+    line-height: 1;
+    letter-spacing: .4px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: Roboto;
+    padding: 0px 20px;
+}
