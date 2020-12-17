@@ -77,14 +77,14 @@ WHERE contracte.idVehicle = '" . $_GET['idvehiculo'] . "'";
             <?php
             }
         } else {
-            $consulta = "SELECT reservarecollida.dataFi, reservarecollida.dataInici, reservarecollida.dataReserva, reservarecollida.idClient, reservarecollida.classeReserva FROM `reservarecollida`";
+            $consulta = "SELECT * FROM `reservareservada`";
             include './sql/ejecutarsql.php';
 
             while ($valores = mysqli_fetch_array($resultat)) {
             ?>
                 <div class="reserva-main">
                     <div>
-                        <h2>Reserva</h2>
+                        <h2>Reserva reservada</h2>
                         <h2>IdCliente: <?php echo $valores['idClient'] ?></h2>
                         <h2>Clase: <?php echo $valores['classeReserva'] ?></h2>
                         <h2>Fecha reserva:<?php echo $valores['dataReserva'] ?></h2>
@@ -98,14 +98,56 @@ WHERE contracte.idVehicle = '" . $_GET['idvehiculo'] . "'";
 
             <?php
             }
-            $consulta = "SELECT reservafinalitzada.dataFi, reservafinalitzada.dataInici, reservafinalitzada.dataReserva, reservafinalitzada.idClient, reservafinalitzada.classeReserva FROM `reservafinalitzada`";
+            $consulta = "SELECT * FROM `reservapagada`";
             include './sql/ejecutarsql.php';
 
             while ($valores = mysqli_fetch_array($resultat)) {
             ?>
                 <div class="reserva-main">
                     <div>
-                        <h2>Reserva</h2>
+                        <h2>Reserva pagada</h2>
+                        <h2>IdCliente: <?php echo $valores['idClient'] ?></h2>
+                        <h2>Clase: <?php echo $valores['classeReserva'] ?></h2>
+                        <h2>Fecha reserva:<?php echo $valores['dataReserva'] ?></h2>
+                    </div>
+                    <div class="fechas-reservas">
+                        <h2>Fecha inicio: <?php echo $valores['dataInici'] ?></h2>
+                        <h2 class="fechas-reservas-space">-</h2>
+                        <h2>Fecha fin: <?php echo $valores['dataFi'] ?></h2>
+                    </div>
+                </div>
+
+            <?php
+            }
+            $consulta = "SELECT * FROM `reservarecollida`";
+            include './sql/ejecutarsql.php';
+
+            while ($valores = mysqli_fetch_array($resultat)) {
+            ?>
+                <div class="reserva-main">
+                    <div>
+                        <h2>Reserva recogida</h2>
+                        <h2>IdCliente: <?php echo $valores['idClient'] ?></h2>
+                        <h2>Clase: <?php echo $valores['classeReserva'] ?></h2>
+                        <h2>Fecha reserva:<?php echo $valores['dataReserva'] ?></h2>
+                    </div>
+                    <div class="fechas-reservas">
+                        <h2>Fecha inicio: <?php echo $valores['dataInici'] ?></h2>
+                        <h2 class="fechas-reservas-space">-</h2>
+                        <h2>Fecha fin: <?php echo $valores['dataFi'] ?></h2>
+                    </div>
+                </div>
+
+            <?php
+            }
+            $consulta = "SELECT * FROM `reservafinalitzada`";
+            include './sql/ejecutarsql.php';
+
+            while ($valores = mysqli_fetch_array($resultat)) {
+            ?>
+                <div class="reserva-main">
+                    <div>
+                        <h2>Reserva finalizada</h2>
                         <h2>IdCliente: <?php echo $valores['idClient'] ?></h2>
                         <h2>Clase: <?php echo $valores['classeReserva'] ?></h2>
                         <h2>Fecha reserva:<?php echo $valores['dataReserva'] ?></h2>

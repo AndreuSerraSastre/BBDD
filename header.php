@@ -30,7 +30,7 @@
                     echo "<a href=\"reservas.php?filtrar=false\">Reservas</a>";
                     echo "<a href=\"vehiculos.php\">Vehiculos</a>";
                     echo "<a href=\"clientes.php\">Clientes</a>";
-                    echo "<a href=\"contractos.php\">Contratos</a>";
+                    echo "<a href=\"contratos.php\">Contratos</a>";
                 }
                 echo "<a href=\"index.php?CerrarSesion=true\" class=\"cerrarSession\" >Cerrar Sesión</a>";
             } else {
