@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="./css/contact.css" />
+  <link rel="stylesheet" href="./css/form.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
@@ -11,7 +11,7 @@ include './header.php';
 ?>
 
 <body>
-  <div class="contact_form">
+  <div class="custom_form">
     <div class="formulario">
       <h1>Formulario de contacto</h1>
       <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
