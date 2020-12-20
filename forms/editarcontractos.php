@@ -34,7 +34,7 @@
         $fechafin = $fechafin->format('yy-m-d');
         ?>
 
-        <h1 class="titulo-editar">Editar el contracte</h1>
+        <h1 class="titulo-editar">Editar el contrato</h1>
 
         <div class="div-form-editar">
 
@@ -49,20 +49,7 @@
                         $consulta = "SELECT * FROM `usuari`";
                         include './../sql/ejecutarsql.php';
                         while ($valores = mysqli_fetch_array($resultat)) {
-                            echo '<option value="' . $valores['id'] . '">' . $valores['nom'] . '</option>';
-                        }
-                        ?>
-                    </select><br>
-                </div>
-
-                <div class="div-propiedad">
-                    <label class="div-label" for="lname">Administrador:</label><br>
-                    <select class="div-input" id="administrador" name="administrador" value="<?php echo '<option value="' . $valores['idAdministrador'] . '">' . $valores['idAdministrador'] . '</option>' ?>">
-                        <?php
-                        $consulta = "SELECT * FROM `usuari`";
-                        include './../sql/ejecutarsql.php';
-                        while ($valores = mysqli_fetch_array($resultat)) {
-                            echo '<option value="' . $valores['id'] . '">' . $valores['nom'] . '</option>';
+                            echo '<option value="' . $valores['dni'] . '">' . $valores['nom'] . '</option>';
                         }
                         ?>
                     </select><br>
@@ -77,34 +64,6 @@
                         while ($valores = mysqli_fetch_array($resultat)) {
                             echo '<option value="' . $valores['idVehicle'] . '">' . $valores['matricula'] . '</option>';
                         }
-                        ?>
-                    </select><br>
-                </div>
-
-                <div class="div-propiedad">
-                    <label class="div-label" for="lname">Reserva recogida:</label><br>
-                    <select class="div-input" type="text" id="reservarecogida" name="reservarecogida" value="<?php echo '<option value="' . $valores['idReservaRecollida'] . '">' . $valores['idReservaRecollida'] . '</option>' ?>">
-                        <?php
-                        $consulta = "SELECT * FROM `reservarecollida`";
-                        include './../sql/ejecutarsql.php';
-                        while ($valores = mysqli_fetch_array($resultat)) {
-                            echo '<option value="' . $valores['id'] . '">' . $valores['id'] . '</option>';
-                        }
-                        echo "<option value='NULL'>N/A</option>";
-                        ?>
-                    </select><br>
-                </div>
-
-                <div class="div-propiedad">
-                    <label class="div-label" for="lname">Reserva finalizada:</label><br>
-                    <select class="div-input" type="text" id="Reservafinalizada" name="Reservafinalizada" value="<?php echo '<option value="' . $valores['idReservaFinalitzada'] . '">' . $valores['idReservaFinalitzada'] . '</option>' ?>">
-                        <?php
-                        $consulta = "SELECT * FROM `reservafinalitzada`";
-                        include './../sql/ejecutarsql.php';
-                        while ($valores = mysqli_fetch_array($resultat)) {
-                            echo '<option value="' . $valores['id'] . '">' . $valores['id'] . '</option>';
-                        }
-                        echo "<option value='NULL'>N/A</option>";
                         ?>
                     </select><br>
                 </div>

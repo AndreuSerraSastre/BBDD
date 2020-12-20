@@ -80,3 +80,9 @@ if (!isset($_SESSION["Usuario"])) {
 </body>
 
 </html>
+
+<script>
+    $(function() {
+        $("#clients-header").addClass("active");
+    });
+</script>

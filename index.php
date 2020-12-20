@@ -35,3 +35,9 @@
 </body>
 
 </html>
+
+<script>
+    $(function() {
+        $("#home-header").addClass("active");
+    });
+</script>

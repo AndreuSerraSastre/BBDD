@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="./../css/comprobar.css">
 
 <?php
-$consulta = "UPDATE `contracte` SET `idVehicle`='" . $_POST["vehiculo"] . "',`idClient`='" . $_POST["usuario"] . "',`idAdministrador`='" . $_POST["administrador"] . "',`idReservaRecollida`='" . $_POST["reservarecogida"] . "',`idReservaFinalitzada`='" . $_POST["Reservafinalizada"] . "',`dataFi`='" . $_POST["hasta"] . "',`dataInici`='" . $_POST["desde"] . "' WHERE id = '" . $_POST["id"] . "'";
-
+$consulta = "UPDATE `contracte` SET `idVehicle`='" . $_POST["vehiculo"] . "',`idClient`='" . $_POST["usuario"] . "',`dataFi`='" . $_POST["hasta"] . "',`dataInici`='" . $_POST["desde"] . "' WHERE id = '" . $_POST["id"] . "'";
 
 include './../sql/ejecutarsql.php';
 

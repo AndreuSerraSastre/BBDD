@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/header.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,15 +13,15 @@
     <div class="header">
         <a href="./" class="logo">AlquilaCar.com</a>
         <div class="header-right">
-            <a class="active" href="./">Home</a>
-            <a href="contact.php">Contactar</a>
+            <a id="home-header" href="./">Home</a>
+            <a id="contactar-header" href="contact.php">Contactar</a>
             <?php
             session_start();
 
             if (isset($_GET['CerrarSesion'])) {
                 unset($_SESSION["Usuario"]);
                 unset($_SESSION["Role"]);
-                unset($_SESSION["ID"]);
+                unset($_SESSION["DNI"]);
                 echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=./index.php'>";
             }
 
@@ -29,7 +29,7 @@
                 if (isset($_SESSION["Role"]) && $_SESSION["Role"] == "ADMINISTRADOR") {
                     echo "<a href=\"reservas.php?filtrar=false\">Reservas</a>";
                     echo "<a href=\"vehiculos.php\">Vehiculos</a>";
-                    echo "<a href=\"clients.php\">Clientes</a>";
+                    echo "<a id=\"clients-header\" href=\"clients.php\">Clientes</a>";
                     echo "<a href=\"contratos.php\">Contratos</a>";
                 }
                 echo "<a href=\"index.php?CerrarSesion=true\" class=\"cerrarSession\" >Cerrar Sesión</a>";

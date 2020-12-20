@@ -25,7 +25,7 @@
         unset($_SESSION["Usuario"]);
         unset($_SESSION["Usuario"]);
         unset($_SESSION["Role"]);
-        unset($_SESSION["ID"]);
+        unset($_SESSION["DNI"]);
     } else {
         echo "<div class=\"alertsucc\">
         <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> 

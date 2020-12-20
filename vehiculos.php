@@ -30,7 +30,8 @@
 
         <div class="vehiculo-main">
             <div>
-                <img class="imagen-vehiculo" src="./img/<?php echo $valores['foto'] ?>"><img>
+            <img class="imagen-vehiculo" src="./img/<?php echo $valores['foto'] ?>"><img>
+                <img class="imagen-vehiculo" src="<?php echo $valores['foto'] ?>"><img>
                 <div class="opciones-vehiculo">
                     <div class="icono-texto-clase">
                         <img src="./img/doors.png"></img>
